@@ -17,6 +17,9 @@ namespace BankApplication
         // Every bank account has the same seed.
         private static int accountNumberSeed = 1234567890;
 
+        // One bank account has many different transactions associated with it.
+        private List<Transaction> transactions = new List<Transaction>();
+
         public BankAccount(string name, decimal initialBalance)
         {
             this.Owner = name;
