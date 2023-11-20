@@ -10,7 +10,7 @@ namespace BankApplication
     {
         public string Number { get; }
         public string Owner { get; set; }
-        public decimal Balance { get; }
+        public decimal Balance
 
         // It's private, which means it can only be accessed by code inside the BankAccount class.
         // It's static, which means it's shared by all of the BankAccount objects.
