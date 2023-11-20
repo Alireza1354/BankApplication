@@ -1,4 +1,4 @@
-# BankApplication
+# Bank Application
 This file will contain the definition of a bank account. Object Oriented programming organizes code by creating types in the form of classes. These classes contain the code that represents a specific entity. The BankAccount class represents a bank account. The code implements specific operations through methods and properties.
 
 ## The bank account supports this behavior:
