@@ -9,6 +9,19 @@
 
             account.MakeWithdrawal(120, DateTime.Now, "Hammok");
             Console.WriteLine(account.Balance);
+
+            try
+            {
+                var invalidAccount = new BankAccount("invalid", -50);
+            }
+            catch (ArgumentOutOfRangeException e)
+            {
+                Console.WriteLine("Exception caught creating account with negative balance");
+                Console.WriteLine(e.ToString());
+            }
+
+            account.MakeWithdrawal(50, DateTime.Now, "Xbox Game");
+            Console.WriteLine(account.Balance);
         }
     }
 }
