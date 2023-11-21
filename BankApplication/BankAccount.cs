@@ -65,5 +65,21 @@ namespace BankApplication
             var withdrawal = new Transaction(-amount, date, note);
             transactions.Add(withdrawal);
         }
+
+        public string GetAccountHistory()
+        {
+            var report = new System.Text.StringBuilder();
+
+            //Header
+            report.AppendLine("Date\t\tAmount\tNote");
+
+            //Rows
+            foreach (var item in transactions)
+            {
+                report.AppendLine($"{item.Date.ToShortDateString()}\t{item.Amount}\t{item.Notes}");
+            }
+
+            return report.ToString();
+        }
     }
 }
